@@ -215,7 +215,6 @@ return (
 console.log(shopifyCart);
 
 alert(shopifyCart.checkoutUrl);
-
     for (let i = 1; i < cart.length; i++) {
       await addToCartShopify(
         shopifyCart.id,

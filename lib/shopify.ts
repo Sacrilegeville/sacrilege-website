@@ -117,6 +117,8 @@ export async function createCart(
 
 console.log("FULL CART RESPONSE", JSON.stringify(data, null, 2));
 
+console.log("CREATE CART RESPONSE:", data);
+
 return data.cartCreate.cart;
 }
 
@@ -156,7 +158,9 @@ export async function addToCartShopify(
     }
   );
 
-  return data.cartLinesAdd.cart;
+  console.log("ADD TO CART RESPONSE:", data);
+
+return data.cartLinesAdd.cart;
 }
 export async function getProductByHandle(handle: string) {
   const data = await shopifyFetch(
