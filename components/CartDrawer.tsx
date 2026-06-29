@@ -225,6 +225,7 @@ return (
   "https://unyj9v-0e.myshopify.com"
 );
 
+alert(fixedCheckout);
 console.log(fixedCheckout);
 
 window.location.href = fixedCheckout;
