@@ -208,9 +208,13 @@ return (
     const first = cart[0];
 
     const shopifyCart = await createCart(
-      first.variantId,
-      first.quantity
-    );
+  first.variantId,
+  first.quantity
+);
+
+console.log(shopifyCart);
+
+alert(shopifyCart.checkoutUrl);
 
     for (let i = 1; i < cart.length; i++) {
       await addToCartShopify(

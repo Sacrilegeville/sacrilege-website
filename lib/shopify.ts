@@ -113,7 +113,9 @@ export async function createCart(
     }
   );
 
-  return data.cartCreate.cart;
+  console.log("CREATE CART RESPONSE:", data);
+
+return data.cartCreate.cart;
 }
 
 /**
