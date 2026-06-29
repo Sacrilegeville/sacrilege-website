@@ -1,6 +1,7 @@
 const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN!;
-
+console.log("DOMAIN:", domain);
+console.log("TOKEN EXISTS:", !!token);
 const endpoint = `https://${domain}/api/2025-07/graphql.json`;
 
 /**
