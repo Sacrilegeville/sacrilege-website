@@ -212,9 +212,6 @@ return (
   first.quantity
 );
 
-console.log(shopifyCart);
-
-alert(shopifyCart.checkoutUrl);
     for (let i = 1; i < cart.length; i++) {
       await addToCartShopify(
         shopifyCart.id,
@@ -223,7 +220,14 @@ alert(shopifyCart.checkoutUrl);
       );
     }
 
-    window.location.href = shopifyCart.checkoutUrl;
+    const fixedCheckout = shopifyCart.checkoutUrl.replace(
+  "https://sacrilege.us",
+  "https://unyj9v-0e.myshopify.com"
+);
+
+console.log(fixedCheckout);
+
+window.location.href = fixedCheckout;
   } catch (err) {
     console.error(err);
     alert("Checkout failed.");
