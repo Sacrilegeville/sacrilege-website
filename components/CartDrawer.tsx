@@ -1,5 +1,5 @@
 "use client";
-
+import { createCart, addToCartShopify } from "@/lib/shopify";
 import { useEffect, useState } from "react";
 import {
   getCart,
@@ -201,25 +201,31 @@ return (
                   </div>
 
                  <button
-  onClick={() => {
-    const lineItems = cart.map((item) => {
- console.log(item);
+  onClick={async () => {
+  if (cart.length === 0) return;
 
-const variantId = item.variantId.split("/").pop();
+  try {
+    const first = cart[0];
 
-console.log("Variant ID:", variantId);
+    const shopifyCart = await createCart(
+      first.variantId,
+      first.quantity
+    );
 
-return `${variantId}:${item.quantity}`;
+    for (let i = 1; i < cart.length; i++) {
+      await addToCartShopify(
+        shopifyCart.id,
+        cart[i].variantId,
+        cart[i].quantity
+      );
+    }
 
-});
-
-   const url = `https://unyj9v-0e.myshopify.com/cart/${lineItems.join(",")}`;
-
-alert(url);
-console.log(url);
-
-window.location.href = url;
-  }}
+    window.location.href = shopifyCart.checkoutUrl;
+  } catch (err) {
+    console.error(err);
+    alert("Checkout failed.");
+  }
+}}
  className="w-full h-14 rounded-full bg-white text-black uppercase tracking-[0.35em] text-sm font-medium transition-all duration-300 hover:bg-zinc-200 active:scale-[0.98]"
 >
   Checkout
