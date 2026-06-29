@@ -203,9 +203,14 @@ return (
                  <button
   onClick={() => {
     const lineItems = cart.map((item) => {
-  const variantId = item.variantId.split("/").pop();
+ console.log(item);
 
-  return `${variantId}:${item.quantity}`;
+const variantId = item.variantId.split("/").pop();
+
+console.log("Variant ID:", variantId);
+
+return `${variantId}:${item.quantity}`;
+
 });
 
    const url = `https://unyj9v-0e.myshopify.com/cart/${lineItems.join(",")}`;
