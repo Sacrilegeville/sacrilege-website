@@ -221,10 +221,7 @@ return (
     }
 
     console.log("Checkout URL:", shopifyCart.checkoutUrl);
-
-alert(shopifyCart.checkoutUrl);
-console.log("Checkout URL:", shopifyCart.checkoutUrl);
-return;
+window.location.href = shopifyCart.checkoutUrl;
   } catch (err) {
     console.error(err);
     alert("Checkout failed.");
