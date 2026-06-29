@@ -119,6 +119,8 @@ console.log("FULL CART RESPONSE", JSON.stringify(data, null, 2));
 
 console.log("CREATE CART RESPONSE:", data);
 
+console.log("CHECKOUT URL:", data.cartCreate.cart.checkoutUrl);
+
 return data.cartCreate.cart;
 }
 
@@ -158,7 +160,7 @@ export async function addToCartShopify(
     }
   );
 
-  console.log("ADD TO CART RESPONSE:", data);
+ console.log("CHECKOUT URL:", data.cartLinesAdd.cart.checkoutUrl);
 
 return data.cartLinesAdd.cart;
 }
