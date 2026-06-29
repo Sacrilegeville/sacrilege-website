@@ -222,7 +222,9 @@ return (
 
     console.log("Checkout URL:", shopifyCart.checkoutUrl);
 
-window.location.href = shopifyCart.checkoutUrl;
+alert(shopifyCart.checkoutUrl);
+console.log("Checkout URL:", shopifyCart.checkoutUrl);
+return;
   } catch (err) {
     console.error(err);
     alert("Checkout failed.");
