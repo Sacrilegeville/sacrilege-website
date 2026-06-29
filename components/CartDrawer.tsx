@@ -207,18 +207,20 @@ return (
   try {
     const first = cart[0];
 
-    const shopifyCart = await createCart(
+ const shopifyCart = await createCart(
   first.variantId,
   first.quantity
 );
 
-    for (let i = 1; i < cart.length; i++) {
-      await addToCartShopify(
-        shopifyCart.id,
-        cart[i].variantId,
-        cart[i].quantity
-      );
-    }
+for (let i = 1; i < cart.length; i++) {
+  await addToCartShopify(
+    shopifyCart.id,
+    cart[i].variantId,
+    cart[i].quantity
+  );
+}
+
+window.location.href = shopifyCart.checkoutUrl;
 
   } catch (err) {
     console.error(err);
