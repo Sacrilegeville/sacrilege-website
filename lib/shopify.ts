@@ -115,6 +115,8 @@ export async function createCart(
 
   console.log("CREATE CART RESPONSE:", data);
 
+console.log("FULL CART RESPONSE", JSON.stringify(data, null, 2));
+
 return data.cartCreate.cart;
 }
 
