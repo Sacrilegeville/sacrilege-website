@@ -220,8 +220,6 @@ return (
       );
     }
 
-    console.log("Checkout URL:", shopifyCart.checkoutUrl);
-window.location.href = shopifyCart.checkoutUrl;
   } catch (err) {
     console.error(err);
     alert("Checkout failed.");
