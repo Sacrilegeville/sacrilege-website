@@ -208,8 +208,8 @@ return (
   return `${variantId}:${item.quantity}`;
 });
 
-    const url = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/cart/${lineItems.join(",")}`;
-console.log(url);
+   const url = `https://unyj9v-0e.myshopify.com/cart/${lineItems.join(",")}`;
+window.location.href = url;
     window.location.href = url;
   }}
  className="w-full h-14 rounded-full bg-white text-black uppercase tracking-[0.35em] text-sm font-medium transition-all duration-300 hover:bg-zinc-200 active:scale-[0.98]"
