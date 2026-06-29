@@ -220,15 +220,9 @@ return (
       );
     }
 
-    const fixedCheckout = shopifyCart.checkoutUrl.replace(
-  "https://sacrilege.us",
-  "https://unyj9v-0e.myshopify.com"
-);
+    console.log("Checkout URL:", shopifyCart.checkoutUrl);
 
-alert(fixedCheckout);
-console.log(fixedCheckout);
-
-window.location.href = fixedCheckout;
+window.location.href = shopifyCart.checkoutUrl;
   } catch (err) {
     console.error(err);
     alert("Checkout failed.");
