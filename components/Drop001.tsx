@@ -34,13 +34,20 @@ export default async function Drop001() {
               href={`/products/${product.handle}`}
               className="group"
             >
+  <div className="relative overflow-hidden rounded-xl bg-zinc-900 aspect-[3/4] border border-white/5">
 
-           <div className="overflow-hidden rounded-xl bg-zinc-900 aspect-[3/4] border border-white/5">
   <img
     src={product.featuredImage?.url}
     alt={product.title}
-    className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+    className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-75"
   />
+
+  <div className="absolute inset-0 flex items-end justify-center pb-8 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+    <span className="border border-white px-6 py-3 text-xs uppercase tracking-[0.35em] backdrop-blur-sm bg-black/30">
+      SHOP NOW
+    </span>
+  </div>
+
 </div>
 
 <div className="mt-8 text-center">
