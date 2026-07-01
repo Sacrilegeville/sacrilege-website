@@ -8,7 +8,7 @@ export default function LaunchPage() {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/45" />
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center px-8">
 
