@@ -3,7 +3,7 @@ export default function LaunchPage() {
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
 
       <img
-        src="/images/hero1.png"
+       src="/images/hero2.png"
         alt="Sacrilege"
         className="absolute inset-0 h-full w-full object-cover"
       />
