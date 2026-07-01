@@ -23,7 +23,8 @@ export default function Navbar() {
   }, []);
 
   return (
-   <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-8">
+  <header className="fixed top-0 left-0 z-50 w-full">
+    <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-8">
           {/* Logo */}
           <Link
             href="/"
@@ -36,29 +37,30 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.32em]">
 
             <a
-              href="#drop001"
-              className="text-zinc-400 transition-colors duration-300 hover:text-white"
-            >
-              Shop
-            </a>
+  href="#drop001"
+  className="text-zinc-300 transition-all duration-300 hover:text-white hover:tracking-[0.36em]"
+>
+  Shop
+</a>
 
-            <a
-              href="#editorial"
-              className="text-zinc-400 transition-colors duration-300 hover:text-white"
-            >
-              Campaign
-            </a>
+<a
+  href="#editorial"
+  className="text-zinc-300 transition-all duration-300 hover:text-white hover:tracking-[0.36em]"
+>
+  Campaign
+</a>
 
           </nav>
 
           {/* Cart */}
           <button
             onClick={() => window.dispatchEvent(new Event("open-cart"))}
-            className="px-2 uppercase tracking-[0.28em] text-xs font-medium text-white/90 transition-all duration-300 hover:text-white"
+           className="rounded-full border border-white/20 px-5 py-2 uppercase tracking-[0.3em] text-xs font-medium text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
           >
             BAG {count > 0 ? `(${count})` : ""}
           </button>
 
-        </div>
+            </div>
+       </header>
   );
 }

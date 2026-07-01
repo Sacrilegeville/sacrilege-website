@@ -8,10 +8,10 @@ export default function Hero() {
      <img
   src="/images/hero2.png"
   alt="Sacrilege Hero"
-  className="absolute inset-0 h-full w-full object-cover object-[60%_center] md:object-center pointer-events-none"
+  className="absolute inset-0 h-full w-full object-cover object-[60%_center] md:object-center pointer-events-none scale-105 transition-transform duration-[15000] ease-out"
 >
     </img>      {/* Dark Overlay */}
-     <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/80 pointer-events-none" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/50 to-black pointer-events-none" />
       {/* Hero Content */}
       <div className="relative z-10 flex min-h-screen items-center justify-center text-center px-6 md:px-8">
   <div className="max-w-3xl">
@@ -30,11 +30,10 @@ export default function Hero() {
 
     <Link
       href="/#drop001"
-      className="inline-flex mt-12 h-14 items-center justify-center rounded-full border border-white/60 bg-black/25 backdrop-blur-sm px-12 uppercase tracking-[0.35em] text-sm font-medium transition-all duration-500 hover:bg-white hover:text-black hover:border-white"
+      className="inline-flex mt-12 h-14 items-center justify-center rounded-full border border-white/60 bg-black/25 backdrop-blur-sm px-12 uppercase tracking-[0.35em] text-sm font-medium transition-all duration-500 hover:bg-white hover:text-black hover:scale-105 hover:border-white"
     >
       SHOP DROP 001
     </Link>
-
   </div>
 </div>
 
