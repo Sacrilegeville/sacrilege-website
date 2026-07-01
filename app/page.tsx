@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Drop001 from "@/components/Drop001";
 import Editorial from "@/components/Editorial";
-import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,8 +19,6 @@ export default function Home() {
       <Drop001 />
 
       <Editorial />
-
-      <Newsletter />
 
       <Footer />
 
